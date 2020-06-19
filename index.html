@@ -11,10 +11,17 @@
     <!-- Material Design for Bootstrap CSS -->
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
 
-<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="    crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"       integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="       crossorigin=""></script>
+
+    <script src="https://kit.fontawesome.com/ce848cb7a6.js" crossorigin="anonymous"></script>
 
     <title>j0nathanb</title>
   </head>
+
   <body style="font-family: Source Code Pro, sans-serif;">
     <nav class="navbar navbar-default" role="navigation">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -51,7 +58,7 @@
             </ul>
           </li>
         </ul>
-      </div><!-- /.navbar-collapse -->
+      </div>
     </nav>
 
     <!-- Optional JavaScript -->
@@ -62,20 +69,17 @@
     <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
 
 
-    <div class="jumbotron">
+    <div class="jumbotron bg-light">
+      <img src="assets/avatar.png" style="width:128px; border-radius:50%">
       <h1 class="display-4">Jonathan Bradshaw</h1>
       <p class="lead">A tinkerer of sorts</p>
       <hr class="my-4">
-      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-      <p class="lead">
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-      </p>
     </div>
     
     <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="card">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-5">
+          <div class="card p-4" style="border-radius: 1rem">
             <div class="card-body">
               <h5 class="card-title">About</h5>
               <p class="card-text">My name is Jonathan, and I'm currently in Berkeley. Soy bilíngüe y amo México 🇲🇽. 
@@ -87,30 +91,52 @@
           </div>
         </div>
 
-        <div class="col-md-6">
-          <div class="card">
+        <div class="col-md-5">
+          <div class="card p-4" style="border-radius: 1rem">
             <div class="card-body">
               <h5 class="card-title">Location</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <p class="card-text"><span><i class="fas fa-map-marker-alt mr-2"></i>Berkeley, CA</span></p>
+              <div id="mapid" style="width: 100%; height: 200px"></div>
+              <script>
+                var map = L.map('mapid').setView([37.8715, -122.2730], 12);
+
+                L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+                  attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                  maxZoom: 18,
+                  id: 'mapbox/streets-v11',
+                  tileSize: 512,
+                  zoomOffset: -1,
+                  accessToken: 'pk.eyJ1IjoiamxiMTk4MiIsImEiOiJjazlxcG9kYjIwaXIxM21wNTZ3a2tpeXIxIn0.u70MP26wk5yYL2wOU7PfVg',
+                  detectRetina: true 
+                }).addTo(map);
+              </script>
+              <!-- <iframe width="100%" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-122.34786987304688%2C37.833784990618575%2C-122.20367431640626%2C37.931335857027115&amp;layer=hot" ></iframe><br/><small><a href="https://www.openstreetmap.org/#map=13/37.8826/-122.2758&amp;layers=H">View Larger Map</a></small> -->
+
             </div>
           </div>
         </div>
       </div>
 
 <div><p></p></div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="card">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-5">
+          <div class="card p-4" style="border-radius: 1rem">
             <div class="card-body">
               <h5 class="card-title">Projects</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <p class="card-text">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Drone Report</li>
+                  <li class="list-group-item">Highland TV</li>
+                  <li class="list-group-item">Game of Life</li>
+                  <li class="list-group-item">Tlahtolli</li>
+                </ul>
+              </p>
               <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="card">
+        <div class="col-md-5">
+          <div class="card p-4" style="border-radius: 1rem">
             <div class="card-body">
               <h5 class="card-title">Resume</h5>
               <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
