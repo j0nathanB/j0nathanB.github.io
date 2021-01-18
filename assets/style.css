@@ -9,7 +9,83 @@
     .mobile {display:none;}
 }
 
+
+@keyframes neon {
+  0% {
+    text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+    0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+    0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+  }
+  50% {
+    text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+    0 0 5px var(--shadow-color-light), 0 0 15px var(--shadow-color-light), 0 0 25px var(--shadow-color-light),
+    0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 60px var(--shadow-color), 0 0 80px var(--shadow-color), 0 0 110px var(--shadow-color), 0 0 210px var(--shadow-color);
+  }
+  100% {
+    text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+    0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+    0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+  }
+}
+
 a.btn.btn-info {
   background-color: #03a9f4;
   color: white
+}
+
+.card {
+  min-height: 28em;
+  background-color: white;
+  opacity: 0.86;
+}
+
+body {
+  background-image: url('east_bay.jpg');
+  font-family: Open Sans, sans-serif;
+}
+
+div.link_container {
+  background-color: white;
+  opacity: 0.75;
+  border-radius: 14em;
+  max-width: 22%;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+
+.links:hover {
+  background-color: goldenrod;
+}
+
+.display-4 {
+  font-family: 'Lobster', cursive;
+  color: turquoise;
+  font-size: 2.75 em;
+    animation: neon 3s infinite;
+  --shadow-color: #FF9E9E;
+  --shadow-color-light: white;
+}
+
+.lead {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: cornsilk
+}
+
+.ohlone {
+  font-size: x-small;
+  text-align: justify;
+  text-justify: inter-word;
+  font-family: 'Oswald', sans-serif;
+  color: lightgrey;
+  opacity: 0.75
+}
+
+.long_date {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: lightgrey;
+  opacity: 0.75;
+}
+
+.long_date:hover {
+  color: lightgrey;  /* outer right cyan */
 }

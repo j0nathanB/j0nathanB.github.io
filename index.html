@@ -11,11 +11,10 @@
     <!-- Material Design for Bootstrap CSS -->
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
 
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans&family=Oswald&family=Roboto+Condensed:ital,wght@1,400;1,700&display=swap" rel="stylesheet"> 
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="    crossorigin=""/>
-
-    <link rel="stylesheet" href="assets/style.css">
 
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"       integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="       crossorigin=""></script>
 
@@ -24,7 +23,7 @@
     <title>j0nathanb</title>
   </head>
 
-  <body style="font-family: Open Sans, sans-serif;">
+  <body>
 
 
     <!-- Optional JavaScript -->
@@ -33,13 +32,14 @@
     <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
     <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+    <link rel="stylesheet" href="assets/style.css">
     <script src="assets/tonalpohualli.js"></script>
 
 
     <div class="jumbotron bg-transparent mt-5 mb-0">
       <div class="container-fluid text-center">
-        <img src="assets/avatar.png" style="width:128px; border-radius:50%" class="mx-auto mb-3">
-        <div class="text-center">
+        <img src="assets/profile_pic.jpg" style="width:128px; border-radius:50%" class="mx-auto mb-3">
+        <div class="text-center page_title">
           <h1 class="display-4 desktop">Jonathan Bradshaw</h1>
           <h1 class="display-4 mobile">Jonathan</h1>    
           <h1 class="display-4 mobile">Bradshaw</h1>          
@@ -47,36 +47,39 @@
 
         <p class="lead mb-5">A tinkerer of sorts</p>
         <div class="container mx-auto w-100 text-center" style="font-size: x-large;">
-          <div class="d-inline-flex links">
-            <a href="mailto:j0nathanb.dev@gmail.com" class="text-danger">
-              <div class="desktop mx-2"><i class="far fa-envelope"></i></div>
-              <div class="mobile mx-2"><i class="far fa-envelope fa-2x"></i></div>
-            </a>
+          <div class="link_container mx-auto">
+            <div class="d-inline-flex links">
+              <a href="mailto:j0nathanb.dev@gmail.com" class="text-danger">
+                <div class="desktop mx-2"><i class="far fa-envelope"></i></div>
+                <div class="mobile mx-2"><i class="far fa-envelope fa-2x"></i></div>
+              </a>
+            </div>
+            <div class="d-inline-flex links">
+              <a href="https://www.linkedin.com/in/jlbradshaw/" class="text-primary">
+                <div class="desktop mx-2"><i class="fab fa-linkedin-in"></i></div>
+                <div class="mobile mx-2"><i class="fab fa-linkedin-in fa-2x"></i></div>            
+              </a>  
+            </div>
+            <div class="d-inline-flex links">
+              <a href="https://github.com/j0nathanB/" class="text-dark">
+                <div class="desktop mx-2"><i class="fab fa-github"></i></div>
+                <div class="mobile mx-2"><i class="fab fa-github fa-2x"></i></div>
+              </a>
+            </div>
+            <div class="d-inline-flex links">
+              <a href="https://pinboard.in/u:jlb1982" class="text-info">
+                <div class="desktop mx-2"><i class="fas fa-thumbtack"></i></div>
+                <div class="mobile mx-2"><i class="fas fa-thumbtack fa-2x"></i></div>
+              </a>
+            </div>
+            <div class="d-inline-flex links">
+              <a href="https://www.instagram.com/_j0nathanb_/" class="text-warning">
+                <div class="desktop mx-2"><i class="fab fa-instagram"></i></div>
+                <div class="mobile mx-2"><i class="fab fa-instagram fa-2x"></i></div>
+              </a>
+            </div>
           </div>
-          <div class="d-inline-flex links">
-            <a href="https://github.com/j0nathanB/" class="text-dark">
-            <div class="desktop mx-2"><i class="fab fa-github"></i></div>
-            <div class="mobile mx-2"><i class="fab fa-github fa-2x"></i></div>
-          </a>
-          </div>
-          <div class="d-inline-flex links">
-            <a href="https://pinboard.in/u:jlb1982" class="text-info">
-            <div class="desktop mx-2"><i class="fas fa-thumbtack"></i></div>
-            <div class="mobile mx-2"><i class="fas fa-thumbtack fa-2x"></i></div>
-          </a>
-          </div>
-          <div class="d-inline-flex links">
-            <a href="https://www.linkedin.com/in/jlbradshaw/" class="text-primary">
-            <div class="desktop mx-2"><i class="fab fa-linkedin-in"></i></div>
-            <div class="mobile mx-2"><i class="fab fa-linkedin-in fa-2x"></i></div>            
-          </a>
-          </div>
-          <div class="d-inline-flex links">
-            <a href="https://www.instagram.com/_j0nathanb_/" class="text-warning">
-            <div class="desktop mx-2"><i class="fab fa-instagram"></i></div>
-            <div class="mobile mx-2"><i class="fab fa-instagram fa-2x"></i></div>
-          </a>
-          </div>
+
         </div>
       </div>
     </div>
@@ -87,11 +90,11 @@
           <div class="card p-4 my-2" style="border-radius: 1rem">
             <div class="card-body">
               <h5 class="card-title mb-4">About</h5>
-              <p class="card-text">My name is Jonathan, and I'm currently in Berkeley. Soy bilíngüe y amo México 🇲🇽. 
+              <p class="card-text">Hi there! My name is Jonathan, and I'm currently in Berkeley, California. Soy bilíngüe y amo México 🇲🇽. 
 
-              <p>I like open-source software, front-end work, and automating things with Python or JavaScript. </p>
+              <p>I currently build automated solutions for AI and ML-related efforts. I work with APIs, data pipelines, AWS services, and other neat tools. I like open-source software, front-end stuff, Python, and JavaScript.</p>
 
-              <p>Outside of work, I like to connect with nature, spend time with family, and enjoy the humanities (e.g., art, music, stories).</p>
+              <p>Outside of work, I like to connect with nature, spend time with family, collect stamps, and enjoy the humanities (e.g., art, drama, music, and stories).</p>
             </div>
           </div>
         </div>
@@ -100,7 +103,7 @@
           <div class="card p-4 my-2" style="border-radius: 1rem">
             <div class="card-body">
               <h5 class="card-title mb-4">Location</h5>
-              <p class="card-text"><span><i class="fas fa-map-marker-alt mr-2 text-danger"></i>Berkeley, CA</span></p>
+              <p class="card-text"><span><i class="fas fa-map-marker-alt mr-2 text-danger"></i>Xučyun - Berkeley, CA</span></p>
               <div id="mapid" style="width: 100%; height: 200px"></div>
               <script>
                 var map = L.map('mapid').setView([37.8715, -122.2730], 12);
@@ -125,8 +128,6 @@
               <h5 class="card-title mb-4">Projects</h5>
               <p class="card-text">
                 <dl>
-                  <dt>🚧 Drone Report 🚧</dt>
-                  <dd>Mapping drone strikes on Leaflet (under construction)</dd>
                   <dt class="mt-3"><a href="http://highlandtv.net/" class="text-info">Highland TV</a><a href="https://github.com/j0nathanB/tv"><i class="fas fa-code ml-3 text-success"></i></a></dt>
                   <dd>A nostalgic TV/remote control UX</dd>
                   <dt class="mt-3"><a href="https://j0nathanb.github.io/life/" class="text-info">Game of Life</a><a href=""><i class="fas fa-code ml-3 text-success"></i></a></dt>
@@ -145,21 +146,29 @@
             <div class="card-body">
               <h5 class="card-title mb-4">Resume</h5>
               <p class="card-text mb-3">Click to download a PDF copy of my resume</p>
-              <a href="assets/JonathanBradshaw_resume_2020-02-29_c.pdf" class="btn btn-info">DOWNLOAD</a>
+              <a href="assets/JonathanBradshaw_resume_2021-01-17.pdf" class="btn btn-info">DOWNLOAD</a>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <footer class="page-footer mt-5 mb-5 text-center text-muted">
-      <a href="https://maya.nmai.si.edu/calendar/maya-calendar-converter" id="long-date" target="_blank" class="text-muted"></a>
-      <script>
-        const todayDate = new Date()
-        const julianDate = calcJulianDate(todayDate)
-        const longDate = julianDateToLongDate(julianDate, 584283)
+    <footer class="page-footer mt-5 mb-5 text-center text-muted d-flex flex-column align-items-center">
+      <div class="col-md-6">
+        <p class="ohlone">LAND ACKNOWLEDGMENT: I acknowledge that Berkeley sits on the territory of xučyun (Huichin), the ancestral and unceded land of the Chochenyo-speaking Ohlone people, the successors of the sovereign Verona Band of Alameda County. I recognize that I benefit from living and working on their traditional homeland, and I affirm their sovereign rights as first peoples. This land was and continues to be of great importance to the Muwekma Ohlone Tribe and other familial descendants of the Verona Band.</p>
+      </div>
+      
+      <div class="col-md-6">
+        <a href="https://maya.nmai.si.edu/calendar/maya-calendar-converter" id="long-date" target="_blank" class="long_date"></a>
+        <script>
+          const todayDate = new Date()
+          const julianDate = calcJulianDate(todayDate)
+          const longDate = julianDateToLongDate(julianDate, 584283)
 
-        document.getElementById('long-date').innerText = longDate
-      </script>
+          document.getElementById('long-date').innerText = longDate
+          console.log(document.getElementById('long-date'))
+        </script>
+      </div>
+
     </footer>
   </body>
 </html>
