@@ -1,13 +1,4 @@
-@media all and (max-width: 480px) {
-    .desktop {display:none;}
-    .mobile {display:block;}
-    .fa-2x {font-size: 1.5em !important;}
-}
 
-@media all and (min-width: 720px) {
-    .desktop {display:block;}
-    .mobile {display:none;}
-}
 
 
 @keyframes neon {
@@ -41,10 +32,12 @@ a.btn.btn-info {
 
 body {
   background-image: url('east_bay.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: Open Sans, sans-serif;
 }
 
-div.link_container {
+.link_container {
   background-color: white;
   opacity: 0.75;
   border-radius: 14em;
@@ -88,4 +81,19 @@ div.link_container {
 
 .long_date:hover {
   color: lightgrey;  /* outer right cyan */
+}
+
+@media all and (max-width: 480px) {
+    .desktop {display:none;}
+    .mobile {display:block;}
+    .fa-2x {font-size: 1.5em !important;}
+    .link_container {
+      font-size: large;
+      padding-top: 0.5em;
+      min-width: 100%;}
+}
+
+@media all and (min-width: 720px) {
+    .desktop {display:block;}
+    .mobile {display:none;}
 }
