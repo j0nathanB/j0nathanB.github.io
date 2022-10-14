@@ -1,5 +1,71 @@
+body {
+  margin: 40px auto;
+  width: 40vw;
+  max-width: 470px;
+  font-family: "Ubuntu", sans-serif;
+}
+@media screen and (max-width: 700px) {
+  body {
+    width: 75vw;
+  }
+}
+@media screen and (max-width: 480px) {
+  body {
+    width: 80vw;
+  }
+}
 
+p {
+  line-height: 1.5em;
+  color: #444;
+}
 
+a {
+  text-decoration: none;
+  color: #444;
+}
+
+a.button {
+  display: inline-block;
+  margin: 12px 0 0 0;
+  color: white;
+  background: #222;
+  padding: 10px 15px;
+}
+a.button:hover {
+  opacity: 0.9;
+}
+
+img {
+  height: 10vw;
+  border-radius: 25px;
+  margin-bottom: 1em;
+}
+
+div.container {
+  margin-bottom: 1.5em;
+}
+
+h1 {
+  margin-bottom: 0.75em;
+}
+
+.emoji {
+  font-size: xx-large;
+}
+
+.maya {
+  text-align: right; 
+}
+
+.long_date {
+  color: grey;
+  opacity: 0.75;
+}
+
+.long_date:hover {
+  color: lightgrey;  /* outer right cyan */
+}
 
 @keyframes neon {
   0% {
@@ -19,81 +85,23 @@
   }
 }
 
-a.btn.btn-info {
-  background-color: #03a9f4;
-  color: white
-}
-
-.card {
-  min-height: 28em;
-  background-color: white;
-  opacity: 0.86;
-}
-
-body {
-  background-image: url('east_bay.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: Open Sans, sans-serif;
-}
-
-.link_container {
-  background-color: white;
-  opacity: 0.75;
-  border-radius: 14em;
-  max-width: 22%;
-  padding-top: 0.25em;
-  padding-bottom: 0.25em;
-}
-
-.links:hover {
-  background-color: goldenrod;
-}
-
-.display-4 {
-  font-family: 'Lobster', cursive;
-  color: turquoise;
-  font-size: 2.75 em;
-    animation: neon 3s infinite;
+span:hover {
+  animation: neon 3s infinite;
   --shadow-color: #FF9E9E;
-  --shadow-color-light: white;
-}
-
-.lead {
-  font-family: 'Roboto Condensed', sans-serif;
-  color: cornsilk
-}
-
-.ohlone {
-  font-size: x-small;
-  text-align: justify;
-  text-justify: inter-word;
-  font-family: 'Oswald', sans-serif;
-  color: lightgrey;
-  opacity: 0.75
-}
-
-.long_date {
-  font-family: 'Roboto Condensed', sans-serif;
-  color: lightgrey;
-  opacity: 0.75;
-}
-
-.long_date:hover {
-  color: lightgrey;  /* outer right cyan */
+  --shadow-color-light: white; 
 }
 
 @media all and (max-width: 480px) {
-    .desktop {display:none;}
-    .mobile {display:block;}
-    .fa-2x {font-size: 1.5em !important;}
-    .link_container {
-      font-size: large;
-      padding-top: 0.5em;
-      min-width: 100%;}
+  .desktop {display:none;}
+  .mobile {display:block;}
+  .fa-2x {font-size: 1.5em !important;}
+  .link_container {
+    font-size: large;
+    padding-top: 0.5em;
+    min-width: 100%;}
 }
 
 @media all and (min-width: 720px) {
-    .desktop {display:block;}
-    .mobile {display:none;}
+  .desktop {display:block;}
+  .mobile {display:none;}
 }

@@ -1,174 +1,68 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jonathan Bradshaw | Software Engineer</title>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="https://kit.fontawesome.com/ce848cb7a6.js" crossorigin="anonymous"></script>
+  <script src="assets/tonalpohualli.js"></script>
+</head>
+<body>
 
-    <!-- Material Design for Bootstrap fonts and icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
-
-    <!-- Material Design for Bootstrap CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans&family=Oswald&family=Roboto+Condensed:ital,wght@1,400;1,700&display=swap" rel="stylesheet"> 
-
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="    crossorigin=""/>
-
-    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"       integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="       crossorigin=""></script>
-
-    <script src="https://kit.fontawesome.com/ce848cb7a6.js" crossorigin="anonymous"></script>
-
-    <title>j0nathanb</title>
-  </head>
-
-  <body>
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
-    <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
-    <link rel="stylesheet" href="assets/style.css">
-    <script src="assets/tonalpohualli.js"></script>
-
-
-    <div class="jumbotron bg-transparent mt-5 mb-0">
-      <div class="container-fluid text-center">
-        <img src="assets/profile_pic.jpg" style="width:128px; border-radius:50%" class="mx-auto mb-3">
-        <div class="text-center page_title">
-          <h1 class="display-4 desktop">Jonathan Bradshaw</h1>
-          <h1 class="display-4 mobile">Jonathan</h1>    
-          <h1 class="display-4 mobile">Bradshaw</h1>          
-        </div>
-
-        <p class="lead mb-5">A tinkerer of sorts</p>
-        <div class="container mx-auto w-100 text-center" style="font-size: x-large;">
-          <div class="link_container mx-auto">
-            <div class="d-inline-flex links">
-              <a href="mailto:j0nathanb.dev@gmail.com" class="text-danger">
-                <div class="desktop mx-2"><i class="far fa-envelope"></i></div>
-                <div class="mobile mx-2"><i class="far fa-envelope fa-2x"></i></div>
-              </a>
-            </div>
-            <div class="d-inline-flex links">
-              <a href="https://www.linkedin.com/in/jlbradshaw/" class="text-primary">
-                <div class="desktop mx-2"><i class="fab fa-linkedin-in"></i></div>
-                <div class="mobile mx-2"><i class="fab fa-linkedin-in fa-2x"></i></div>            
-              </a>  
-            </div>
-            <div class="d-inline-flex links">
-              <a href="https://github.com/j0nathanB/" class="text-dark">
-                <div class="desktop mx-2"><i class="fab fa-github"></i></div>
-                <div class="mobile mx-2"><i class="fab fa-github fa-2x"></i></div>
-              </a>
-            </div>
-            <div class="d-inline-flex links">
-              <a href="https://pinboard.in/u:jlb1982" class="text-info">
-                <div class="desktop mx-2"><i class="fas fa-thumbtack"></i></div>
-                <div class="mobile mx-2"><i class="fas fa-thumbtack fa-2x"></i></div>
-              </a>
-            </div>
-            <div class="d-inline-flex links">
-              <a href="https://www.instagram.com/_j0nathanb_/" class="text-warning">
-                <div class="desktop mx-2"><i class="fab fa-instagram"></i></div>
-                <div class="mobile mx-2"><i class="fab fa-instagram fa-2x"></i></div>
-              </a>
-            </div>
-          </div>
-
-        </div>
+  <div class="container mx-auto w-100 text-center" style="font-size: x-large;">
+    <img src="assets/profile_pic.jpg" alt="">
+    <div class="link_container mx-auto">
+      <div class="d-inline-flex links">
+        <a href="mailto:j0nathanb.dev@gmail.com" class="text-danger">
+          <div class="desktop mx-2"><i class="far fa-envelope"></i></div>
+          <div class="mobile mx-2"><i class="far fa-envelope fa-2x"></i></div>
+        </a>
+      </div>
+      <div class="d-inline-flex links">
+        <a href="https://www.linkedin.com/in/jlbradshaw/" class="text-primary">
+          <div class="desktop mx-2"><i class="fab fa-linkedin-in"></i></div>
+          <div class="mobile mx-2"><i class="fab fa-linkedin-in fa-2x"></i></div>            
+        </a>  
+      </div>
+      <div class="d-inline-flex links">
+        <a href="https://github.com/j0nathanB/" class="text-dark">
+          <div class="desktop mx-2"><i class="fab fa-github"></i></div>
+          <div class="mobile mx-2"><i class="fab fa-github fa-2x"></i></div>
+        </a>
+      </div>
+      <div class="d-inline-flex links">
+        <a href="https://www.instagram.com/_j0nathanb_/" class="text-warning">
+          <div class="desktop mx-2"><i class="fab fa-instagram"></i></div>
+          <div class="mobile mx-2"><i class="fab fa-instagram fa-2x"></i></div>
+        </a>
       </div>
     </div>
-    
-    <div class="container">
-      <div class="row d-flex justify-content-center">
-        <div class="col-md-5">
-          <div class="card p-4 my-2" style="border-radius: 1rem">
-            <div class="card-body">
-              <h5 class="card-title mb-4">About</h5>
-              <p class="card-text">Hi there! My name is Jonathan, and I'm currently in Berkeley, California. Soy bilíngüe y amo México 🇲🇽. 
+  </div>
 
-              <p>I currently build automated solutions for AI and ML-related efforts. I work with APIs, data pipelines, AWS services, and other neat tools. I like open-source software, front-end stuff, Python, and JavaScript.</p>
+  <h1>Jonathan Bradshaw is a software engineer based in Berkeley, California.</h1>
 
-              <p>Outside of work, I like to connect with nature, spend time with family, collect stamps, and enjoy the humanities (e.g., art, drama, music, and stories).</p>
-            </div>
-          </div>
-        </div>
+  <p>Jonathan has extensive customer-facing experience and makes a living providing technical solutions to customers of AI startups.</p>
 
-        <div class="col-md-5">
-          <div class="card p-4 my-2" style="border-radius: 1rem">
-            <div class="card-body">
-              <h5 class="card-title mb-4">Location</h5>
-              <p class="card-text"><span><i class="fas fa-map-marker-alt mr-2 text-danger"></i>Xučyun - Berkeley, CA</span></p>
-              <div id="mapid" style="width: 100%; height: 200px"></div>
-              <script>
-                var map = L.map('mapid').setView([37.8715, -122.2730], 12);
+  <p><span class="emoji">👷🏼‍♂️</span><strong> A full-stack engineer</strong>, Jonathan has worked with a variety of technologies: React/Redux, AWS (S3, Lambda, EC2), APIs, Pandas, Numpy, Postgres, ElasticSearch, Kubernetes, and the command line.</p>
 
-                L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-                  attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
-                  maxZoom: 18,
-                  id: 'mapbox/streets-v11',
-                  tileSize: 512,
-                  zoomOffset: -1,
-                  accessToken: 'pk.eyJ1IjoiamxiMTk4MiIsImEiOiJjazlxcG9kYjIwaXIxM21wNTZ3a2tpeXIxIn0.u70MP26wk5yYL2wOU7PfVg',
-                  detectRetina: true 
-                }).addTo(map);
-              </script>
-            </div>
-          </div>
-        </div>
+  <p><span class="emoji">🫱🏼‍🫲🏽  </span><strong> AI startups</strong> hire him to help their customers feel supported and heard, but most importantly, to help them make the most value of their investment as quickly as possible. </p>
 
-        <div class="col-md-5">
-          <div class="card p-4 my-2" style="border-radius: 1rem">
-            <div class="card-body">
-              <h5 class="card-title mb-4">Projects</h5>
-              <p class="card-text">
-                <dl>
-                  <dt class="mt-3"><a href="http://highlandtv.net/" class="text-info">Highland TV</a><a href="https://github.com/j0nathanB/tv"><i class="fas fa-code ml-3 text-success"></i></a></dt>
-                  <dd>A nostalgic TV/remote control UX</dd>
-                  <dt class="mt-3"><a href="https://j0nathanb.github.io/life/" class="text-info">Game of Life</a><a href=""><i class="fas fa-code ml-3 text-success"></i></a></dt>
-                  <dd>Conway's classic in JS</dd>
-                  <dt class="mt-3"><a href="https://chrome.google.com/webstore/detail/latino-latinx/gfhcjnaaakciomjhgmidnonbmapfkpeh/" class="text-info">Latino-Latinx</a><a href="https://github.com/j0nathanB/latino-latinx"><i class="fas fa-code ml-3 text-success"></i></a></dt>
-                  <dd>Demonymic Chrome extension</dd>
-                  <dt class="mt-3"><a href="https://tlahtolli2.blogspot.com/" class="text-info">Tlahtolli</a></dt>
-                  <dd>My blog</dd>
-                </dl>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-5">
-          <div class="card p-4 my-2" style="border-radius: 1rem">
-            <div class="card-body">
-              <h5 class="card-title mb-4">Resume</h5>
-              <p class="card-text mb-3">Click to download a PDF copy of my resume</p>
-              <a href="assets/JonathanBradshaw_resume_2022-09-20.pdf" class="btn btn-info">DOWNLOAD</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <footer class="page-footer mt-5 mb-5 text-center text-muted d-flex flex-column align-items-center">
-      <div class="col-md-6">
-        <p class="ohlone">LAND ACKNOWLEDGMENT: I acknowledge that Berkeley sits on the territory of xučyun (Huichin), the ancestral and unceded land of the Chochenyo-speaking Ohlone people, the successors of the sovereign Verona Band of Alameda County. I recognize that I benefit from living and working on their traditional homeland, and I affirm their sovereign rights as first peoples. This land was and continues to be of great importance to the Muwekma Ohlone Tribe and other familial descendants of the Verona Band.</p>
-      </div>
-      
-      <div class="col-md-6">
-        <a href="https://maya.nmai.si.edu/calendar/maya-calendar-converter" id="long-date" target="_blank" class="long_date"></a>
-        <script>
-          const todayDate = new Date()
-          const julianDate = calcJulianDate(todayDate)
-          const longDate = julianDateToLongDate(julianDate, 584283)
+  <p><span class="emoji">🌿</span><strong> Outside of work</strong>, Jonathan enjoys spending time with family and friends, being with nature, swimming, and enjoying humanity's heritage (art, literature, drama, music, and stories).
 
-          document.getElementById('long-date').innerText = longDate
-          console.log(document.getElementById('long-date'))
-        </script>
-      </div>
+  <p><a href="https://drive.google.com/file/d/1bt0idbSXJSgLhu1ml3w0TY6cILWwa0GT/view?usp=sharing" class="button">Download Resume</a></p>
 
-    </footer>
-  </body>
+  <p class="maya"><a href="https://maya.nmai.si.edu/calendar/maya-calendar-converter" id="long-date" target="_blank" class="long_date"></a></p>
+  <script>
+    const todayDate = new Date()
+    const julianDate = calcJulianDate(todayDate)
+    const longDate = julianDateToLongDate(julianDate, 584283)
+
+    document.getElementById('long-date').innerText = longDate
+    console.log(document.getElementById('long-date'))
+  </script>
+</body>
 </html>
