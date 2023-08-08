@@ -1,68 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jonathan Bradshaw | Software Engineer</title>
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
-  <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/style.css">
-  <script src="https://kit.fontawesome.com/ce848cb7a6.js" crossorigin="anonymous"></script>
-  <script src="assets/tonalpohualli.js"></script>
-</head>
-<body>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=B612+Mono&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>j0nathanb</title>
+    <style>
+      body {
+        background: #f2f2f2;
+        padding: 50px;
+      }
 
-  <div class="container mx-auto w-100 text-center" style="font-size: x-large;">
-    <img src="assets/profile_pic.jpg" alt="">
-    <div class="link_container mx-auto">
-      <div class="d-inline-flex links">
-        <a href="mailto:j0nathanb.dev@gmail.com" class="text-danger">
-          <div class="desktop mx-2"><i class="far fa-envelope"></i></div>
-          <div class="mobile mx-2"><i class="far fa-envelope fa-2x"></i></div>
-        </a>
-      </div>
-      <div class="d-inline-flex links">
-        <a href="https://www.linkedin.com/in/jlbradshaw/" class="text-primary">
-          <div class="desktop mx-2"><i class="fab fa-linkedin-in"></i></div>
-          <div class="mobile mx-2"><i class="fab fa-linkedin-in fa-2x"></i></div>            
-        </a>  
-      </div>
-      <div class="d-inline-flex links">
-        <a href="https://github.com/j0nathanB/" class="text-dark">
-          <div class="desktop mx-2"><i class="fab fa-github"></i></div>
-          <div class="mobile mx-2"><i class="fab fa-github fa-2x"></i></div>
-        </a>
-      </div>
-      <div class="d-inline-flex links">
-        <a href="https://www.instagram.com/_j0nathanb_/" class="text-warning">
-          <div class="desktop mx-2"><i class="fab fa-instagram"></i></div>
-          <div class="mobile mx-2"><i class="fab fa-instagram fa-2x"></i></div>
-        </a>
-      </div>
+      a {
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      a:hover {
+        color: #333;
+        text-decoration: underline;
+      }
+
+      .typewriter {
+        font-family: 'B612 Mono', monospace;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+    </style>
+    <script>
+      const calcJulianDate = (date) => {
+      let year = new Date(date).getYear();
+
+      if (year < 1000) {
+        year += 1900;
+      }
+
+      const month = date.getMonth() + 1;
+      const day = date.getDate();
+      const hour = date.getHours();
+      const min = date.getMinutes();
+      const sec = date.getSeconds();
+      const univTime = hour + (min / 60) + (sec / 3600);
+
+      const sign = 100 * year + month - 190002.5 >= 0 ? 1 : -1; 
+
+      const part1 = 367 * year;
+      const part2 = Math.floor( (7 * (year + Math.floor( (month + 9) / 12))) / 4 );
+      const part3 = day + Math.floor( (275 * month) / 9 );
+      const part4 = 1721013.5 + (univTime / 24);
+      const part5 = 0.5 * sign;
+      
+      return part1 - part2 + part3 + part4 - part5 + 1;
+    }
+
+    /**
+      JDToLongDate
+      julianday is the julian day count, NOT a julian calendar date
+      corresponder must be one of the numbers from the above list
+      returns a string containing a mayan day count
+    */
+    const julianDateToLongDate = (julianDay, corresponder) => {
+      let adjustedDate = julianDay - corresponder;
+
+      const bactuns = Math.floor(adjustedDate/144000);
+      adjustedDate -= bactuns * 144000;
+      
+      const katuns = Math.floor(adjustedDate/7200);
+      adjustedDate -= katuns * 7200;
+      
+      const tuns = Math.floor(adjustedDate/360);
+      adjustedDate -= tuns * 360;
+      
+      const uinals = Math.floor(adjustedDate/20);
+
+      const kins = Math.floor(adjustedDate - (uinals * 20));
+
+      return `${bactuns}.${katuns}.${tuns}.${uinals}.${kins}`;
+    };
+    </script>
+  </head>
+  <body>
+    <div class="typewriter">
+      <p id="long-date"></p>
+      <script>
+        const todayDate = new Date()
+        const julianDate = calcJulianDate(todayDate)
+        const longDate = julianDateToLongDate(julianDate, 584283)
+    
+        document.getElementById('long-date').innerText = longDate
+        console.log(document.getElementById('long-date'))
+      </script>
+      <p>j0nathanb's homepage</p>
+      <br />
+      <p>ABOUT</p>
+      <p>I'm based in Berkeley, CA, and I like to make things with code occasionally.</p>
+      <br />
+      <p>PROJECTS</p>
+      <p>+ <a href="https://j0nathanb.github.io/drone_warfare/">Drone Warfare: Mapping the U.S. Drone War</a></p>
+      <p>+ <a href="https://j0nathanb.github.io/life/">Conway's Game of Life</a></p>
+      <br />
+      <p>CONTACT</p>
+      <p>j0nathanb.dev@gmail.com</p>
     </div>
-  </div>
-
-  <h1>Jonathan Bradshaw is a software engineer based in Berkeley, California.</h1>
-
-  <p>Jonathan has extensive customer-facing experience and makes a living providing technical solutions to customers of AI startups.</p>
-
-  <p><span class="emoji">👷🏼‍♂️</span><strong> A full-stack engineer</strong>, Jonathan has worked with a variety of technologies: React/Redux, AWS (S3, Lambda, EC2), APIs, Pandas, Numpy, Postgres, ElasticSearch, Kubernetes, and the command line.</p>
-
-  <p><span class="emoji">🫱🏼‍🫲🏽  </span><strong> AI startups</strong> hire him to help their customers feel supported and heard, but most importantly, to help them make the most value of their investment as quickly as possible. </p>
-
-  <p><span class="emoji">🌿</span><strong> Outside of work</strong>, Jonathan enjoys spending time with family and friends, being with nature, swimming, and enjoying humanity's heritage (art, literature, drama, music, and stories).
-
-  <p><a href="https://drive.google.com/file/d/1bt0idbSXJSgLhu1ml3w0TY6cILWwa0GT/view?usp=sharing" class="button">Download Resume</a></p>
-
-  <p class="maya"><a href="https://maya.nmai.si.edu/calendar/maya-calendar-converter" id="long-date" target="_blank" class="long_date"></a></p>
-  <script>
-    const todayDate = new Date()
-    const julianDate = calcJulianDate(todayDate)
-    const longDate = julianDateToLongDate(julianDate, 584283)
-
-    document.getElementById('long-date').innerText = longDate
-    console.log(document.getElementById('long-date'))
-  </script>
-</body>
+  </body>
 </html>
