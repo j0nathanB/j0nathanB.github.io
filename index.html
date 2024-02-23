@@ -6,16 +6,17 @@
     <link href="https://fonts.googleapis.com/css2?family=B612+Mono&display=swap" rel="stylesheet">
     <meta charset="utf-8">
     <title>j0nathanb</title>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap')</style>
     <style>
       body {
-        background: #f2f2f2;
-        padding: 50px;
+        background: #999;
+        padding: 0px 50px 50px 50px;
       }
 
       a {
         color: #333;
         text-decoration: none;
-        font-weight: bold;
+/*        font-weight: bold;*/
       }
 
       a:hover {
@@ -24,10 +25,38 @@
       }
 
       .typewriter {
-        font-family: 'B612 Mono', monospace;
-        font-size: 20px;
+        font-family: "Anonymous Pro", monospace;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 22px;
         line-height: 1.6;
         color: #333;
+      }
+      #banner{
+        position: absolute;
+        left: 25%;
+        top: 0;
+        width: 50%;
+        display: flex;
+        border: 1px red dotted;
+      }
+      #top-left {
+        position: absolute;
+        left: 45vw;
+        top: 0;
+      }
+       #top-right {
+        position: absolute;
+        right: 1vw;
+        top: 0;
+      }
+      #made-in {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+        font-size: 14px;
+        padding-right: 1%;
       }
     </style>
     <script>
@@ -84,7 +113,8 @@
   </head>
   <body>
     <div class="typewriter">
-      <p id="long-date"></p>
+      <div id="top-left"><p id="long-date"></p></div><div id="top-right"><p>j0nathanb.dev@gmail.com</p></div>
+      <!-- <p id="long-date"></p> -->
       <script>
         const todayDate = new Date()
         const julianDate = calcJulianDate(todayDate)
@@ -93,18 +123,18 @@
         document.getElementById('long-date').innerText = longDate
         console.log(document.getElementById('long-date'))
       </script>
-      <p>j0nathanb's homepage</p>
+
       <br>
-      <p>ABOUT</p>
-      <p>I'm based in <a href="https://en.wikipedia.org/wiki/Berkeley,_California">Berkeley</a>, and I enjoy programming occasionally.</p>
       <br>
       <p>PROJECTS</p>
-      <p>+ <a href="https://j0nathanb.github.io/drone_warfare/">Drone Warfare: Mapping the U.S. Drone War</a></p>
-      <p>+ <a href="https://j0nathanb.github.io/peroflota/">Peroflota</a></p>
-      <p>+ <a href="https://j0nathanb.github.io/life/">Conway's Game of Life</a></p>
+      <p>+ <a href="https://j0nathanb.github.io/drone_warfare/">UFOs / UAP / The Phenomenon</a></p>
+      <p>+ <a href="https://j0nathanb.github.io/drone_warfare/">Drone Warfare Map</a></p>
+      <p>+ <a href="https://j0nathanb.github.io/peroflota/">Galería</a></p>
+      <p>+ <a href="https://j0nathanb.github.io/life/">Game of Life</a></p>
       <br />
-      <p>CONTACT</p>
-      <p>j0nathanb.dev@gmail.com</p>
+      <div id="made-in">
+        <p>Made in Berkeley, California</p>
+      <div>
     </div>
   </body>
 </html>
